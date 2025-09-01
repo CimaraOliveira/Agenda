@@ -1,0 +1,37 @@
+<div class="card border-secondary shadow">
+   <div class="card-header bg-secondary text-white text-center">
+        <h5 class="mb-0">📚 Listagem</h5>
+    </div>
+
+    <div class="card-body">
+        <table class="table table-bordered table-hover">
+            <thead class="thead-light">
+            <tr>
+                <th>#</th>
+                <th>Autor</th>
+                <th>Título</th>
+                <th>ISBN</th>
+                <th class="text-center">Ano de Publicação</th>
+                <th>Quantidade Disponível</th>
+
+            </tr>
+            </thead>
+
+            <tbody>
+         
+            <tr>
+                <td></td>
+                <td>{{ livro.autor }}</td>
+                <td>{{ livro.titulo }}</td>
+                <td>{{ livro.isbn }}</td>
+              
+            </tr>
+            </tbody>
+
+        </table>
+
+
+    </div>
+</div>
+<br/>
+<br/>
