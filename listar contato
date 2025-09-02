@@ -3,35 +3,24 @@
         <h5 class="mb-0">📚 Listagem</h5>
     </div>
 
-    <div class="card-body">
-        <table class="table table-bordered table-hover">
-            <thead class="thead-light">
-            <tr>
-                <th>#</th>
-                <th>Autor</th>
-                <th>Título</th>
-                <th>ISBN</th>
-                <th class="text-center">Ano de Publicação</th>
-                <th>Quantidade Disponível</th>
 
-            </tr>
-            </thead>
+  
+<hr class="featurette-divider">
 
-            <tbody>
-         
-            <tr>
-                <td></td>
-                <td>{{ livro.autor }}</td>
-                <td>{{ livro.titulo }}</td>
-                <td>{{ livro.isbn }}</td>
-              
-            </tr>
-            </tbody>
+<div class="row featurette align-items-center mb-4">
 
-        </table>
+  <div class="col-md-7">
+    <h2 class="featurette-heading fw-bold">{{ teste.nome }} {{ teste.sobrenome }}</h2>
+    <p class="lead mb-1"><strong>Telefone:</strong> {{ teste.telefone }}</p>
+    <small>{{ teste.descricao_curta }}</small>
 
 
+    <div class="d-flex gap-2 mt-2">
+      <a href="#" class="btn btn-info">Alterar</a>
+      <a href="#" class="btn btn-danger btn-sm">Excluir</a>
     </div>
+  </div>
+
+
+  
 </div>
-<br/>
-<br/>
