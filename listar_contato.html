@@ -1,19 +1,19 @@
+{% extends 'base.html' %}
+{% block conteudo %}
 <div class="card border-secondary shadow">
    <div class="card-header bg-secondary text-white text-center">
         <h5 class="mb-0">📚 Listagem</h5>
     </div>
 
-
-  
 <hr class="featurette-divider">
 
 <div class="row featurette align-items-center mb-4">
-
-  <div class="col-md-7">
+{% for teste in testes %}
+  <!-- Texto à esquerda -->
+  <div class="col-md-8">
     <h2 class="featurette-heading fw-bold">{{ teste.nome }} {{ teste.sobrenome }}</h2>
     <p class="lead mb-1"><strong>Telefone:</strong> {{ teste.telefone }}</p>
     <small>{{ teste.descricao_curta }}</small>
-
 
     <div class="d-flex gap-2 mt-2">
       <a href="#" class="btn btn-info">Alterar</a>
@@ -21,6 +21,15 @@
     </div>
   </div>
 
-
-  
+  <!-- Imagem à direita -->
+  <div class="col-md-4 text-end">
+    {% if teste.imagem %}
+      <img src="{{ teste.imagem.url }}" alt="Foto de {{ teste.nome }}"
+           class="img-fluid rounded shadow" width="120" height="120">
+    {% else %}
+      <span class="text-muted"></span>
+    {% endif %}
+  </div>
+{% endfor %}
 </div>
+{% endblock %}
