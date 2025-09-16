@@ -1,0 +1,33 @@
+<div class="card border-secondary shadow">
+   <div class="card-header bg-secondary text-white text-center">
+        <h5 class="mb-0">✏️ Editar Disciplina</h5>
+   </div>
+
+   <div class="card-body">
+       <form method="post">
+           {% csrf_token %}
+
+           <div class="mb-3">
+               <label for="nome" class="form-label fw-bold">Nome da Disciplina</label>
+               <input type="text" name="nome" id="nome" class="form-control"
+                      value="{{ disciplina.nome }}">
+           </div>
+
+           <div class="mb-3">
+               <label for="descricao" class="form-label fw-bold">Descrição</label>
+               <textarea name="descricao" id="descricao" rows="3" class="form-control">{{ disciplina.descricao }}</textarea>
+           </div>
+
+           <div class="mb-3">
+               <label for="carga_horaria" class="form-label fw-bold">Carga Horária</label>
+               <input type="number" name="carga_horaria" id="carga_horaria" class="form-control"
+                      value="{{ disciplina.carga_horaria }}">
+           </div>
+
+           <div class="d-flex justify-content-between">
+               <a href="{% url 'disciplina:listar' %}" class="btn btn-secondary">⬅ Voltar</a>
+               <button type="submit" class="btn btn-success">💾 Salvar Alterações</button>
+           </div>
+       </form>
+   </div>
+</div>
