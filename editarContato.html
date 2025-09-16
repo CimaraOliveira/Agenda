@@ -38,10 +38,10 @@
                <input type="file" name="imagem" id="imagem" class="form-control">
            </div>
 
-           <div class="d-flex justify-content-between">
-               <a href="{% url 'disciplina:listar' %}" class="btn btn-secondary">⬅ Voltar</a>
-               <button type="submit" class="btn btn-success">💾 Salvar Alterações</button>
-           </div>
+           <div class="d-flex justify-content-end">
+                <a href="{% url 'listar' %}" class="btn btn-danger" style="margin-right: 0.1cm;">Cancelar</a>
+                <button type="submit" class="btn btn-success">Salvar</button>
+            </div>
        </form>
    </div>
 </div>
